@@ -19,32 +19,34 @@
     </head>
 
     <body>
-    @csrf <!-- Aggiungi questo token CSRF per la sicurezza -->
-        <div class="card text-start">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-10">
-                        <h4 class="card-title">Create User</h4>
-                    </div>
-                    <div class="col-2">
-                        <button type="submit" class="btn btn-success" id="btn-save">Create</button>                        
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-md-4">
-                        <label for="" class="form-label">Name</label>
-                        <input type="text" name="name" id="name" class="form-control" placeholder="insert name"/>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="" class="form-label">Email</label>
-                        <input type="text" name="email" id="email" class="form-control" placeholder="insert email"/>
+        <form method="post" action="{{ route('user.store') }}">
+        @csrf <!-- Aggiungi questo token CSRF per la sicurezza -->
+            <div class="card text-start">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-10">
+                                <h4 class="card-title">Create User</h4>
+                            </div>
+                            <div class="col-2">
+                                <button type="submit" class="btn btn-success" id="btn-save">Create</button>                        
+                            </div>
                         </div>
-                    <div class="col-md-4">
-                        <label for="" class="form-label">Password</label>
-                        <input type="password" name="password" id="password" class="form-control" placeholder="insert password"/>
+                        <div class="row mt-2">
+                            <div class="col-md-4">
+                                <label for="" class="form-label">Name</label>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="insert name"/>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="" class="form-label">Email</label>
+                                <input type="text" name="email" id="email" class="form-control" placeholder="insert email"/>
+                                </div>
+                            <div class="col-md-4">
+                                <label for="" class="form-label">Password</label>
+                                <input type="password" name="password" id="password" class="form-control" placeholder="insert password"/>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+        </form>
     </body>
 </html>
