@@ -1,3 +1,2 @@
-mysql/data/
-src/composer.lock
 mysql/
+src/composer.lock
