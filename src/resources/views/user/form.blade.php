@@ -1,52 +1,43 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <title>Register user</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+@extends('layouts.app')
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-    </head>
+@section('content')
+    <div class="container mt-4">
+        <h1 class="mb-4">Pagina con Dropdown</h1>
 
-    <body>
-        <form method="post" action="{{ route('user.store') }}">
-        @csrf <!-- Aggiungi questo token CSRF per la sicurezza -->
-            <div class="card text-start">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-10">
-                                <h4 class="card-title">Create User</h4>
-                            </div>
-                            <div class="col-2">
-                                <button type="submit" class="btn btn-success" id="btn-save">Create</button>                        
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-4">
-                                <label for="" class="form-label">Name</label>
-                                <input type="text" name="name" id="name" class="form-control" placeholder="insert name"/>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="" class="form-label">Email</label>
-                                <input type="text" name="email" id="email" class="form-control" placeholder="insert email"/>
-                                </div>
-                            <div class="col-md-4">
-                                <label for="" class="form-label">Password</label>
-                                <input type="password" name="password" id="password" class="form-control" placeholder="insert password"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </form>
-    </body>
-</html>
+        <!-- Dropdown di Bootstrap -->
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Seleziona un'opzione
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Opzione 1</a>
+                <a class="dropdown-item" href="#">Opzione 2</a>
+                <a class="dropdown-item" href="#">Opzione 3</a>
+            </div>
+            <div class="alert alert-primary" role="alert">
+                This is a primary alert—check it out!
+            </div>
+            <div class="alert alert-secondary" role="alert">
+                This is a secondary alert—check it out!
+            </div>
+            <div class="alert alert-success" role="alert">
+                This is a success alert—check it out!
+            </div>
+            <div class="alert alert-danger" role="alert">
+                This is a danger alert—check it out!
+            </div>
+            <div class="alert alert-warning" role="alert">
+                This is a warning alert—check it out!
+            </div>
+            <div class="alert alert-info" role="alert">
+                This is a info alert—check it out!
+            </div>
+            <div class="alert alert-light" role="alert">
+                This is a light alert—check it out!
+            </div>
+            <div class="alert alert-dark" role="alert">
+                This is a dark alert—check it out!
+            </div>
+        </div>
+    </div>
+@endsection

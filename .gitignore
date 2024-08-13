@@ -1,2 +1,4 @@
-mysql/
 src/composer.lock
+node_modules/
+dist
+mysql/
